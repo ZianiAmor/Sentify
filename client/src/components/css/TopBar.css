@@ -1,0 +1,38 @@
+.top-bar {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 16px 0;
+  margin-bottom: 24px;
+}
+
+.top-bar-content {
+  max-width: 100%;
+  padding: 0 24px;
+}
+
+.top-bar-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .top-bar {
+    padding: 12px 0;
+    margin-bottom: 20px;
+  }
+  
+  .top-bar-content {
+    padding: 0 16px;
+  }
+  
+  .top-bar-subtitle {
+    font-size: 14px;
+  }
+}

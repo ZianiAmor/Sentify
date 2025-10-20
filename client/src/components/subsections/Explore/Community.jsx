@@ -1,6 +1,6 @@
 import React from 'react'
 
-const YourEnteries = () => {
+const Community = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const YourEnteries = () => {
   )
 }
 
-export default YourEnteries
+export default Community

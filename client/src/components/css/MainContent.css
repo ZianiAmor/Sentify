@@ -1,0 +1,227 @@
+.main-content {
+  flex:.75;
+  padding: 0px ;
+  background: #1D203E;
+  border-radius: 0px;
+  overflow-y: auto;
+  min-height: 100%;
+  max-height: 100vh;
+}
+
+/* Custom scrollbar styling */
+.main-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background: rgba(139, 95, 191, 0.6);
+  border-radius: 3px;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 95, 191, 0.8);
+}
+
+.content-header {
+  margin-bottom: 24px;
+}
+
+.content-header h1 {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  background: linear-gradient(135deg, #E879F9, #06B6D4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.content-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  margin: 0;
+  font-weight: 400;
+}
+
+.cards-container {
+  padding: 9px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto; /* Changed to auto for better text flow */
+  gap: 16px;
+  max-width: 100%;
+}
+
+/* Main card takes full width on first row */
+.card-main {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+  min-height: 200px; /* Minimum height for main card */
+}
+
+/* Regular cards - 2 per row */
+.card-regular:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+  min-height: 140px; /* Minimum height for regular cards */
+}
+
+.card-regular:nth-child(3) {
+  grid-column: 2;
+  grid-row: 2;
+  min-height: 140px;
+}
+
+.card-regular:nth-child(4) {
+  grid-column: 1;
+  grid-row: 3;
+  min-height: 140px;
+}
+
+/* Back button styling */
+/* Content header with proper spacing */
+
+/* Enhanced Back button styling */
+/* Content header with proper spacing */
+.content-header-minimal {
+  padding: 0x;
+  margin-bottom: 0px;
+}
+
+/* Enhanced Back button styling */
+.back-arrow-float {
+  background: linear-gradient(135deg, rgba(232, 121, 249, 0.15), rgba(6, 182, 212, 0.15));
+  border: none;
+  color: #E879F9;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(15px);
+  font-size: 18px;
+  margin: 9px 0 0 9px;
+  box-shadow: 0 4px 20px rgba(139, 95, 191, 0.15);
+}
+
+.back-arrow-float:hover {
+  background: linear-gradient(135deg, rgba(232, 121, 249, 0.25), rgba(6, 182, 212, 0.25));
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 95, 191, 0.3);
+}
+
+.back-arrow-float:active {
+  transform: translateY(0);
+}
+
+/* Component content styling - FIXED */
+.component-content {
+  flex: 1;
+  overflow: visible; /* Changed from hidden to visible */
+  height: calc(100vh - 60px); /* Adjusted height calculation */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  
+  .card-main {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+  
+  .card-regular:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  .card-regular:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  
+  .card-regular:nth-child(4) {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 16px;
+  }
+  
+  .cards-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 12px;
+  }
+  
+  .card-main,
+  .card-regular {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+  }
+  
+  .card-main {
+    grid-row: 1 !important;
+  }
+  
+  .card-regular:nth-child(2) {
+    grid-row: 2 !important;
+  }
+  
+  .card-regular:nth-child(3) {
+    grid-row: 3 !important;
+  }
+  
+  .card-regular:nth-child(4) {
+    grid-row: 4 !important;
+  }
+
+  .component-content {
+    height: calc(100vh - 80px);
+  }
+}
+
+/* Sub-content styles for when specific sub-section is selected */
+.sub-content {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.content-placeholder {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.content-placeholder h2 {
+  color: white;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #E879F9, #06B6D4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.content-placeholder p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}

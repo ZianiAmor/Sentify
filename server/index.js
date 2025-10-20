@@ -3,6 +3,7 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
 import authRoutes from './routes/authRoutes.js';
+import entriesRoutes from './routes/entries.js';
 import { PrismaClient } from '@prisma/client';
 
 dotenv.config();
@@ -26,6 +27,7 @@ app.get('/api/health', (req, res) => {
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/entries', entriesRoutes);
 
 // Test DB connection and start server
 async function startServer() {
